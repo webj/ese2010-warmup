@@ -1,0 +1,10 @@
+26 Sep 2010 14:16:28,697 INFO  ~ Starting /home/juerg/workspace/KnowledgeBase
+26 Sep 2010 14:16:29,208 INFO  ~ 
+26 Sep 2010 14:16:29,208 INFO  ~ Go to http://localhost:9000/@tests to run the tests
+26 Sep 2010 14:16:29,209 INFO  ~ 
+26 Sep 2010 14:16:29,209 WARN  ~ You're running Play! in DEV mode
+26 Sep 2010 14:16:29,275 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+26 Sep 2010 14:16:34,091 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+26 Sep 2010 14:16:34,603 INFO  ~ Application 'KnowledgeBase' is now started !
+26 Sep 2010 14:21:29,382 WARN  ~ SQL Error: -28, SQLState: S0022
+26 Sep 2010 14:21:29,383 ERROR ~ Column not found: BAUTHOR in statement [select question0_.id as id6_, question0_.author_id as author5_6_, question0_.content as content6_, question0_.timestamp as timestamp6_, question0_.title as title6_ from Question question0_ where bAuthor=?]
