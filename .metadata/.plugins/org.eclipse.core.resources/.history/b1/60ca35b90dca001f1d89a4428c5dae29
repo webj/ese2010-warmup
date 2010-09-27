@@ -1,0 +1,5 @@
+import play.db.jpa.Model;
+
+public class Vote extends Model {
+
+}

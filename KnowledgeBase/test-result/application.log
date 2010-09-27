@@ -1,10 +1,2052 @@
-26 Sep 2010 14:16:28,697 INFO  ~ Starting /home/juerg/workspace/KnowledgeBase
-26 Sep 2010 14:16:29,208 INFO  ~ 
-26 Sep 2010 14:16:29,208 INFO  ~ Go to http://localhost:9000/@tests to run the tests
-26 Sep 2010 14:16:29,209 INFO  ~ 
-26 Sep 2010 14:16:29,209 WARN  ~ You're running Play! in DEV mode
-26 Sep 2010 14:16:29,275 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-26 Sep 2010 14:16:34,091 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-26 Sep 2010 14:16:34,603 INFO  ~ Application 'KnowledgeBase' is now started !
-26 Sep 2010 14:21:29,382 WARN  ~ SQL Error: -28, SQLState: S0022
-26 Sep 2010 14:21:29,383 ERROR ~ Column not found: BAUTHOR in statement [select question0_.id as id6_, question0_.author_id as author5_6_, question0_.content as content6_, question0_.timestamp as timestamp6_, question0_.title as title6_ from Question question0_ where bAuthor=?]
+27 Sep 2010 09:43:30,037 INFO  ~ Starting /home/juerg/ese20100-warmup/KnowledgeBase
+27 Sep 2010 09:43:31,339 INFO  ~ 
+27 Sep 2010 09:43:31,339 INFO  ~ Go to http://localhost:9000/@tests to run the tests
+27 Sep 2010 09:43:31,339 INFO  ~ 
+27 Sep 2010 09:43:31,339 WARN  ~ You're running Play! in DEV mode
+27 Sep 2010 09:43:31,589 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+27 Sep 2010 09:43:43,726 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+27 Sep 2010 09:43:45,057 INFO  ~ Application 'KnowledgeBase' is now started !
+27 Sep 2010 10:26:01,762 ERROR ~ 
+
+@641eo685o
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:27:11,859 ERROR ~ 
+
+@641eo685p
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:27:13,780 ERROR ~ 
+
+@641eo6860
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:30:58,930 ERROR ~ 
+
+@641eo6861
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:31:01,107 ERROR ~ 
+
+@641eo6862
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:21,906 ERROR ~ 
+
+@641eo6863
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:22,605 ERROR ~ 
+
+@641eo6864
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:23,033 ERROR ~ 
+
+@641eo6865
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:23,223 ERROR ~ 
+
+@641eo6866
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:23,360 ERROR ~ 
+
+@641eo6867
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:23,530 ERROR ~ 
+
+@641eo6868
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:23,692 ERROR ~ 
+
+@641eo6869
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:23,856 ERROR ~ 
+
+@641eo686a
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:24,053 ERROR ~ 
+
+@641eo686b
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:24,143 ERROR ~ 
+
+@641eo686c
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:24,303 ERROR ~ 
+
+@641eo686d
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:24,468 ERROR ~ 
+
+@641eo686e
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:24,688 ERROR ~ 
+
+@641eo686f
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:24,885 ERROR ~ 
+
+@641eo686g
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:25,064 ERROR ~ 
+
+@641eo686h
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:25,236 ERROR ~ 
+
+@641eo686i
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:25,438 ERROR ~ 
+
+@641eo686j
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:25,635 ERROR ~ 
+
+@641eo686k
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:25,791 ERROR ~ 
+
+@641eo686l
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:25,962 ERROR ~ 
+
+@641eo686m
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:26,109 ERROR ~ 
+
+@641eo686n
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:32:26,276 ERROR ~ 
+
+@641eo686o
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:34:51,793 ERROR ~ 
+
+@641eo686p
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:35:17,102 ERROR ~ 
+
+@641eo6870
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:35:17,778 ERROR ~ 
+
+@641eo6871
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:35:17,897 ERROR ~ 
+
+@641eo6872
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:36:21,786 ERROR ~ 
+
+@641eo6873
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:36:22,391 ERROR ~ 
+
+@641eo6874
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:36:22,834 ERROR ~ 
+
+@641eo6875
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:36:23,764 ERROR ~ 
+
+@641eo6876
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:36:24,484 ERROR ~ 
+
+@641eo6877
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:17,755 ERROR ~ 
+
+@641eo6878
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:18,372 ERROR ~ 
+
+@641eo6879
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:18,533 ERROR ~ 
+
+@641eo687a
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:18,716 ERROR ~ 
+
+@641eo687b
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:18,888 ERROR ~ 
+
+@641eo687c
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:19,074 ERROR ~ 
+
+@641eo687d
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:19,286 ERROR ~ 
+
+@641eo687e
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:19,524 ERROR ~ 
+
+@641eo687f
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:19,723 ERROR ~ 
+
+@641eo687g
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:19,893 ERROR ~ 
+
+@641eo687h
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:20,035 ERROR ~ 
+
+@641eo687i
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:20,208 ERROR ~ 
+
+@641eo687j
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:20,350 ERROR ~ 
+
+@641eo687k
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:20,492 ERROR ~ 
+
+@641eo687l
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:20,668 ERROR ~ 
+
+@641eo687m
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:21,509 ERROR ~ 
+
+@641eo687n
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:21,670 ERROR ~ 
+
+@641eo687o
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:21,856 ERROR ~ 
+
+@641eo687p
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:22,006 ERROR ~ 
+
+@641eo6880
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:22,180 ERROR ~ 
+
+@641eo6881
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:37:33,815 ERROR ~ 
+
+@641eo6882
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:42,539 ERROR ~ 
+
+@641eo6883
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:45,005 ERROR ~ 
+
+@641eo6884
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:46,491 ERROR ~ 
+
+@641eo6885
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:47,580 ERROR ~ 
+
+@641eo6886
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:49,153 ERROR ~ 
+
+@641eo6887
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:50,991 ERROR ~ 
+
+@641eo6888
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:51,966 ERROR ~ 
+
+@641eo6889
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:53,469 ERROR ~ 
+
+@641eo688a
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:54,530 ERROR ~ 
+
+@641eo688b
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:42:55,707 ERROR ~ 
+
+@641eo688c
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:43:59,400 ERROR ~ 
+
+@641eo688d
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:43:59,876 ERROR ~ 
+
+@641eo688e
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:44:00,042 ERROR ~ 
+
+@641eo688f
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:44:00,185 ERROR ~ 
+
+@641eo688g
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:44:00,334 ERROR ~ 
+
+@641eo688h
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Answer.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:46:24,067 ERROR ~ 
+
+@641eo688i
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more

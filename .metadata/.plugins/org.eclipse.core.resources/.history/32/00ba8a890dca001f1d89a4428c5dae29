@@ -1,0 +1,39 @@
+import java.util.List;
+
+import models.Answer;
+import models.Question;
+import models.User;
+
+import org.junit.Test;
+
+import play.test.UnitTest;
+
+public class VoteTest extends UnitTest {
+
+	@Test
+	public void shouldAddAnVote() {
+
+		User bob = new User("Bob", "hallo").save();
+		User brayn = new User("Brayn", "velo").save();
+		User Roger = new User("Roger", "best").save();
+
+		Question firstQuestion = bob.addQuestion("What's going on?",
+				"Hey guys, What's going on?").save();
+		Answer firstAnswer = firstQuestion.addAnswer(brayn, "A lot").save();
+
+		firstQuestion.addVote(brayn, dislike).save();
+		firstAnswer.addVote(bob, dislike).save();
+		firstAnswer.addVote(Roger, dislike).save();
+
+		assertEquals(3, Vote.count());
+
+		// find all like
+		List<Integer> likes = Vote.find("byLike", "like").fetch();
+		assertEquals(0, likes.size());
+
+		// find all dislike
+		List<Integer> dislike = Vote.find("byDislike", "dislike").fetch();
+		assertEquals(3, dislike.size());
+
+	}
+}

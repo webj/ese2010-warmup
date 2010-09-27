@@ -17,6 +17,11 @@ public class QuestionTest extends UnitTest{
 		assertEquals("I have an question", firstQuestion.title);
 	}
 	
+    @Before
+    public void setup(){
+    	Fixtures.deleteAll();
+    } 
+	
 	@Test
 	public void shouldUseTheRelationAddQuestions(){		
 		
