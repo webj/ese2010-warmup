@@ -62,6 +62,12 @@ public class UserTest extends UnitTest {
 		// Retrieves the questions from bob
 		List<Question> bobQuestion = Question.find("byAuthor", bob).fetch();
 		assertEquals(2, bobQuestion.size());
+		
+		//take the second question. Check
+		Question question = bobQuestion.get(1);
+		assertEquals("Why rise the sun every mornig?", question.title);
+		assertEquals("The question is above", question.content);
+		assertEquals(bob, question.author);
 
 		List<Question> braynQuestion = Question.find("byAuthor", brayn).fetch();
 		assertEquals(0, braynQuestion.size());
@@ -77,21 +83,15 @@ public class UserTest extends UnitTest {
 		User brayn = new User("Brayn", "velo").save();
 
 		// create questions
-		bob.addQuestion("What's going on?", "Hey guys, What's going on?")
-				.save();
-		brayn
-				.addQuestion(
-						"Why doesen't snwo smell?",
+		bob.addQuestion("What's going on?", "Hey guys, What's going on?").save();
+		brayn.addQuestion("Why doesen't snwo smell?",
 						"Hey, yesterday I was in the mountains. "
-								+ "I was very confused when I detected that snow doesen't smell. Pleas help me!")
-				.save();
+								+ "I was very confused when I detected that snow doesen't smell. Pleas help me!").save();
 
-		List<Question> listbobQuestion = Question.find("byAuthor", "Bob")
-				.fetch();
+		List<Question> listbobQuestion = Question.find("byAuthor", bob).fetch();
 		Question bobQuestion = listbobQuestion.get(0);
 
-		List<Question> listbraynQuestion = Question.find("byAuthor", "Brayn")
-				.fetch();
+		List<Question> listbraynQuestion = Question.find("byAuthor", brayn).fetch();
 		Question braynQuestion = listbraynQuestion.get(0);
 
 		bobQuestion.addAnswer(brayn, "A lot").save();
@@ -105,7 +105,7 @@ public class UserTest extends UnitTest {
 		// delete bob
 		bob.delete();
 
-		// All dependencies should be deleted
+		// All dependencies from bob should be deleted
 		assertEquals(1, User.count());
 		assertEquals(1, Answer.count());
 		assertEquals(1, Question.count());

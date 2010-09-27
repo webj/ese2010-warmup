@@ -36,6 +36,9 @@ public class QuestionTest extends UnitTest{
 		//find the answers from Bob's questions
 		List<Answer> bobAnswer = Answer.find("byQuestion", firstQuestion).fetch();
 		assertEquals(1, bobAnswer.size());
+		
+		Answer answer = bobAnswer.get(0);
+		assertEquals("I know now the answer, so the question is sloved", answer.content);
 	}
 	
 	

@@ -1,6 +1,10 @@
-27 Sep 2010 18:18:25,577 INFO  ~ Starting /home/juerg/ese20100-warmup/KnowledgeBase
-27 Sep 2010 18:18:25,992 INFO  ~ 
-27 Sep 2010 18:18:25,992 INFO  ~ Go to http://localhost:9000/@tests to run the tests
-27 Sep 2010 18:18:25,992 INFO  ~ 
-27 Sep 2010 18:18:25,992 WARN  ~ You're running Play! in DEV mode
-27 Sep 2010 18:18:26,294 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+27 Sep 2010 21:47:02,303 INFO  ~ Starting /home/juerg/workspace/KnowledgeBase
+27 Sep 2010 21:47:02,814 INFO  ~ 
+27 Sep 2010 21:47:02,814 INFO  ~ Go to http://localhost:9000/@tests to run the tests
+27 Sep 2010 21:47:02,814 INFO  ~ 
+27 Sep 2010 21:47:02,814 WARN  ~ You're running Play! in DEV mode
+27 Sep 2010 21:47:02,880 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+27 Sep 2010 21:47:06,614 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+27 Sep 2010 21:47:07,131 INFO  ~ Application 'KnowledgeBase' is now started !
+27 Sep 2010 22:08:30,760 WARN  ~ SQL Error: -28, SQLState: S0022
+27 Sep 2010 22:08:30,761 ERROR ~ Column not found: BYAUTHOR in statement [select vote0_.id as id19_, vote0_.answer_id as answer4_19_, vote0_.author as author19_, vote0_.question_id as question5_19_, vote0_.result as result19_ from Vote vote0_ where byauthor=?]
