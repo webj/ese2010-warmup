@@ -1,0 +1,11 @@
+import org.junit.Test;
+
+import play.test.UnitTest;
+
+public class VoteTest extends UnitTest {
+
+	@Test
+	public void shouldAddAnVote() {
+
+	}
+}

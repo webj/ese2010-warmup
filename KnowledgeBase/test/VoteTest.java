@@ -16,25 +16,32 @@ public class VoteTest extends UnitTest {
 
 		User bob = new User("Bob", "hallo").save();
 		User brayn = new User("Brayn", "velo").save();
-		User Roger = new User("Roger", "best").save();
 
-		Question firstQuestion = bob.addQuestion("What's going on?",
-				"Hey guys, What's going on?").save();
-		Answer firstAnswer = firstQuestion.addAnswer(brayn, "A lot").save();
+		bob.addQuestion("Whatever", "blabla").save();
+		brayn.addQuestion("Another question", "this is the question").save();
 
-		firstQuestion.addVote(brayn, "dislike").save();
-		firstAnswer.addVote(bob, "dislike").save();
-		firstAnswer.addVote(Roger, "dislike").save();
+		List<Question> listbobQuestion = Question.find("byAuthor", bob).fetch();
+		Question bobQuestion = listbobQuestion.get(0);
 
-		assertEquals(3, Vote.count());
+		List<Question> listbraynQuestion = Question.find("byAuthor", brayn)
+				.fetch();
+		Question braynQuestion = listbraynQuestion.get(0);
 
-		// find all like
-		List<Integer> likes = Vote.find("byVote", "like").fetch();
-		assertEquals(0, likes.size());
+		bobQuestion.addAnswer(brayn, "A lot").save();
+		braynQuestion.addAnswer(bob, "Brayn, you are an idiot").save();
+		bobQuestion.addAnswer(bob, "Oh, ok").save();
 
-		// find all dislike
-		List<Integer> dislike = Vote.find("byVote", "dislike").fetch();
-		assertEquals(3, dislike.size());
+		List<Answer> listbobAnswer = Answer.find("byAuthor", bob).fetch();
+		Answer bobAnswer = listbobAnswer.get(0);
+
+		List<Answer> listbraynAnswer = Answer.find("byAuthor", brayn).fetch();
+		Answer braynAnswer = listbraynAnswer.get(0);
+
+		braynAnswer.addVote(bob, "like").save();
+		bobAnswer.addVote(bob, "like").save();
+		bobAnswer.addVote(brayn, "dislike").save();
+
+		List<Vote> bobAnswerVotes = Vote.find("byAuthor", "like").fetch();
 
 	}
 }

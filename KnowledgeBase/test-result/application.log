@@ -2050,3 +2050,77 @@ Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany t
 	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
 	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
 	... 4 more
+27 Sep 2010 10:55:37,415 ERROR ~ 
+
+@641eo688j
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 10:55:38,264 ERROR ~ 
+
+@641eo688k
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class: models.Question.votes[models.Vote]
+	at org.hibernate.cfg.annotations.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:1071)
+	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:602)
+	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:543)
+	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:66)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1177)
+	at org.hibernate.cfg.AnnotationConfiguration.secondPassCompile(AnnotationConfiguration.java:329)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1162)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1226)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:173)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:854)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:667)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+27 Sep 2010 11:16:19,633 ERROR ~ 
+
+@641eo688l
+Internal Server Error (500) for request GET /@tests
+
+Compilation error (In /test/VoteTest.java around line 22)
+The file /test/VoteTest.java could not be compiled. Error raised is : firstQuestion cannot be resolved
+
+play.exceptions.JavaCompilationException: firstQuestion cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:240)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:551)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:409)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:271)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:253)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:250)
+	at play.Play.detectChanges(Play.java:476)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
