@@ -39,11 +39,9 @@ public class VoteTest extends UnitTest {
 
 		braynAnswer.addVote(bob, "like").save();
 		bobAnswer.addVote(bob, "like").save();
-		bobAnswer.addVote(brayn, "like").save();
+		bobAnswer.addVote(brayn, "dislike").save();
 
-		List<Vote> votes = Vote.find("byResult", "like").fetch();
-		
-		assertEquals(3, votes.size());
+		List<Vote> bobAnswerVotes = Vote.find("byAuthor", "like").fetch();
 
 	}
 }

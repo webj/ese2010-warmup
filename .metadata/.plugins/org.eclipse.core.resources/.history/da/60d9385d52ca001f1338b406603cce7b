@@ -109,7 +109,6 @@ public class UserTest extends UnitTest {
 		assertEquals(1, User.count());
 		assertEquals(1, Answer.count());
 		assertEquals(1, Question.count());
-	}
 	
 
 }

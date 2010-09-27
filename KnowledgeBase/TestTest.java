@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import play.test.UnitTest;
 
-public class VoteTest extends UnitTest {
+public class TestTest extends UnitTest {
 
 	@Test
 	public void shouldAddAnVote() {
@@ -47,3 +47,4 @@ public class VoteTest extends UnitTest {
 
 	}
 }
+

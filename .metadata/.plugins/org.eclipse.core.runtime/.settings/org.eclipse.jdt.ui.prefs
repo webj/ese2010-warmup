@@ -1,4 +1,4 @@
-#Mon Sep 27 09:57:46 CEST 2010
+#Mon Sep 27 18:10:22 CEST 2010
 sp_cleanup.add_missing_override_annotations=true
 content_assist_proposals_foreground=20,19,18
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
@@ -48,6 +48,7 @@ sp_cleanup.use_this_for_non_static_field_access=false
 tabWidthPropagated=true
 sp_cleanup.never_use_blocks=false
 sp_cleanup.use_blocks_only_for_return_and_throw=false
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
 sp_cleanup.remove_unused_private_types=true
 sp_cleanup.sort_members_all=false
 sp_cleanup.add_missing_nls_tags=false

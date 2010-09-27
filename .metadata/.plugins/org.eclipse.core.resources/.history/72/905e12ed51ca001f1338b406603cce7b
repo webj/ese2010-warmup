@@ -43,6 +43,7 @@ public class VoteTest extends UnitTest {
 
 		List<Vote> votes = Vote.find("byResult", "like").fetch();
 		
+		System.out.println(votes.size()));
 		assertEquals(3, votes.size());
 
 	}

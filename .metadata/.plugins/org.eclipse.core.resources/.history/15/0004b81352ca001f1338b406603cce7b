@@ -67,7 +67,6 @@ public class UserTest extends UnitTest {
 		assertEquals(0, braynQuestion.size());
 	}
 
-	@Test
 	public void shouldDeleteUserAndEveryDependencies() {
 
 		assertEquals(0, Question.count());
@@ -110,6 +109,5 @@ public class UserTest extends UnitTest {
 		assertEquals(1, Answer.count());
 		assertEquals(1, Question.count());
 	}
-	
 
 }
