@@ -12,9 +12,14 @@ import play.test.Fixtures;
 import play.test.UnitTest;
 
 public class VoteTest extends UnitTest {
-
+	
+	@Before
+	public void setup() {
+		Fixtures.deleteAll();
+	}
+	
 	@Test
-	public void shouldAddAnVote() {
+	public void shouldAddAnVoteToAnswer() {
 		
 		//Create user
 		User bob = new User("Bob", "hallo").save();
@@ -61,14 +66,39 @@ public class VoteTest extends UnitTest {
 		//check if the realtions deletes right
 		bob.delete();
 		
+		assertEquals(1, Vote.count());
 		votes = Vote.find("byResult", true).fetch();
 		assertEquals(1, votes.size());
 
 	}
-	
-	@Before
-	public void setup() {
-		Fixtures.deleteAll();
+
+	@Test
+	public void shouldAddAnVoteQuestion(){
+		
+		//Create user
+		User bob = new User("Bob", "hallo").save();
+		User brayn = new User("Brayn", "velo").save();
+		
+		//Create questions
+		bob.addQuestion("Whatever", "blabla").save();
+		brayn.addQuestion("Another question", "this is the question").save();
+		
+		//fetch the first question
+		List<Question> listbobQuestion = Question.find("byAuthor", bob).fetch();
+		Question bobQuestion = listbobQuestion.get(0);
+		
+		bobQuestion.addVote(bob, true).save();
+		bobQuestion.addVote(brayn, true).save();
+		
+		assertEquals(2, Vote.count());
+		
+
+		
+		brayn.delete();
+		assertEquals(1, Vote.count());
+		
 	}
+	
+
 
 }

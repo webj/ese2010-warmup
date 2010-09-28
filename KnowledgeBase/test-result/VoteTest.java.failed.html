@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Test results for QuestionTest.class</title>
+        <title>Test results for VoteTest.class</title>
         <style type="text/css">
             body {
                 font-family: Arial, Sans;
@@ -60,12 +60,12 @@
     </head>
     <body>
         
-        <div id="header" class="block success">
+        <div id="header" class="block failed">
             <h1>
-                QuestionTest.class
+                VoteTest.class
             </h1>
             <p>
-                SUCCESS
+                FAILED
             </p>
         </div>
         
@@ -73,24 +73,34 @@
             <table>
                                 <tr>
                     <td width="20%" class="passed" valign="top">
-                        <span>shouldCreateANewQuestion</span>
+                        <span>shouldAddAnVoteToAnswer</span>
                     </td>
                     <td class="" valign="top">
                                                                         Ok
                                             </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        20 ms
+                        101 ms
                     </td>
                 </tr>
                                 <tr>
-                    <td width="20%" class="passed" valign="top">
-                        <span>shouldUseTheRelationAddQuestions</span>
+                    <td width="20%" class="failed" valign="top">
+                        <span>shouldAddAnVoteQuestion</span>
                     </td>
-                    <td class="" valign="top">
-                                                                        Ok
-                                            </td>
+                    <td class="error" valign="top">
+                                                <strong>Failure, expected:&lt;1&gt; but was:&lt;2&gt;</strong>
+                                                <div class="source">
+                            <span>In /test/VoteTest.java, line 98 :</span>
+                        </div>
+                        <div class="sourceLine">
+                            <span>
+                                
+                                    		assertEquals(1, Vote.count());
+                                
+                            </span>
+                        </div>
+                                                                                                                    </td>
                     <td width="5%" align="right" class="time" valign="top">
-                        20 ms
+                        32 ms
                     </td>
                 </tr>
                             </table>
