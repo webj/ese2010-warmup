@@ -48,7 +48,7 @@ public class Question extends Model {
 		return this;
 	}
 
-	public Question addVote(User author, String result) {
+	public Question addVote(User author, Boolean result) {
 		Vote vote = new Vote(this, author, result).save();
 		votes.add(vote);
 		this.save();

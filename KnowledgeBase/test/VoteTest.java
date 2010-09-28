@@ -46,22 +46,22 @@ public class VoteTest extends UnitTest {
 		List<Answer> listbraynAnswer = Answer.find("byQuestion", braynQuestion).fetch();
 		Answer braynAnswer = listbraynAnswer.get(0);
 
-		braynAnswer.addVote(bob, "like").save();
-		bobAnswer.addVote(bob, "like").save();
-		bobAnswer.addVote(brayn, "like").save();
-		bobAnswer.addVote(bob, "dis").save();
+		braynAnswer.addVote(bob, true).save();
+		bobAnswer.addVote(bob, true).save();
+		bobAnswer.addVote(brayn, true).save();
+		bobAnswer.addVote(bob, false).save();
 
 		//check if the querys work
-		List<Vote> votes = Vote.find("byResult", "like").fetch();		
+		List<Vote> votes = Vote.find("byResult", true).fetch();		
 		assertEquals(3, votes.size());
 		
-		votes = Vote.find("byResult", "dis").fetch();
+		votes = Vote.find("byResult", false).fetch();
 		assertEquals(1, votes.size());
 		
 		//check if the realtions deletes right
 		bob.delete();
 		
-		votes = Vote.find("byResult", "like").fetch();
+		votes = Vote.find("byResult", true).fetch();
 		assertEquals(1, votes.size());
 
 	}
