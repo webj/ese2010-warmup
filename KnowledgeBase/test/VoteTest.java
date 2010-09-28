@@ -66,9 +66,9 @@ public class VoteTest extends UnitTest {
 		//check if the realtions deletes right
 		bob.delete();
 		
-		assertEquals(1, Vote.count());
+		assertEquals(0, Vote.count());
 		votes = Vote.find("byResult", true).fetch();
-		assertEquals(1, votes.size());
+		assertEquals(0, votes.size());
 
 	}
 
@@ -92,10 +92,7 @@ public class VoteTest extends UnitTest {
 		
 		assertEquals(2, Vote.count());
 		
-
-		
 		brayn.delete();
-		assertEquals(1, Vote.count());
 		
 	}
 	

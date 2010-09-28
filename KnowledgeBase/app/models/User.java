@@ -17,9 +17,13 @@ public class User extends Model {
 
 	@OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
 	public List<Question> questions;
+	
+	@OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
+	public List<Vote> votes;
 
 	public User(String name, String password) {
-
+		
+		this.votes = new ArrayList<Vote>();
 		this.questions = new ArrayList<Question>();
 		this.name = name;
 		this.password = password;
@@ -30,6 +34,11 @@ public class User extends Model {
 		questions.add(question);
 		this.save();
 		return this;
+	}
+
+	public void addVote(Vote vote) {
+		votes.add(vote);
+		this.save();
 	}
 
 }

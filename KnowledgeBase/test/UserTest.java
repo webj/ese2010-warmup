@@ -76,7 +76,6 @@ public class UserTest extends UnitTest {
 	@Test
 	public void shouldDeleteUserAndEveryDependencies() {
 
-		assertEquals(0, Question.count());
 
 		// create user
 		User bob = new User("Bob", "hallo").save();
@@ -90,6 +89,8 @@ public class UserTest extends UnitTest {
 
 		List<Question> listbobQuestion = Question.find("byAuthor", bob).fetch();
 		Question bobQuestion = listbobQuestion.get(0);
+		
+		assertEquals("What's going on?", bobQuestion.title);
 
 		List<Question> listbraynQuestion = Question.find("byAuthor", brayn).fetch();
 		Question braynQuestion = listbraynQuestion.get(0);
@@ -109,6 +110,13 @@ public class UserTest extends UnitTest {
 		assertEquals(1, User.count());
 		assertEquals(1, Answer.count());
 		assertEquals(1, Question.count());
+		
+		//Check if the remaining question is the right
+		List<Question> braynquestion = Question.find("byAuthor", brayn).fetch();
+		Question question = braynquestion.get(0);
+		
+		assertEquals("Why doesen't snwo smell?", question.content);
+		
 	}
 	
 

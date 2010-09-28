@@ -1,8 +1,6 @@
-28 Sep 2010 12:13:36,267 INFO  ~ Starting /home/juerg/ese20100-warmup/ese2010-warmup/KnowledgeBase
-28 Sep 2010 12:13:36,906 INFO  ~ 
-28 Sep 2010 12:13:36,907 INFO  ~ Go to http://localhost:9000/@tests to run the tests
-28 Sep 2010 12:13:36,907 INFO  ~ 
-28 Sep 2010 12:13:36,907 WARN  ~ You're running Play! in DEV mode
-28 Sep 2010 12:13:36,992 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-28 Sep 2010 12:13:42,230 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-28 Sep 2010 12:13:42,984 INFO  ~ Application 'KnowledgeBase' is now started !
+28 Sep 2010 17:42:42,207 INFO  ~ Starting /home/juerg/ese20100-warmup/ese2010-warmup/KnowledgeBase
+28 Sep 2010 17:42:43,015 INFO  ~ 
+28 Sep 2010 17:42:43,015 INFO  ~ Go to http://localhost:9000/@tests to run the tests
+28 Sep 2010 17:42:43,015 INFO  ~ 
+28 Sep 2010 17:42:43,015 WARN  ~ You're running Play! in DEV mode
+28 Sep 2010 17:42:43,154 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
