@@ -17,7 +17,7 @@ public class Vote extends Model {
 	@ManyToOne
 	public Question question;
 
-	public Vote(Question quesiton, User author, Boolean result) {
+	public Vote(Question quesiton, User author, boolean result) {
 
 		this.question = quesiton;
 		this.author = author;
@@ -26,7 +26,7 @@ public class Vote extends Model {
 		
 	}
 
-	public Vote(Answer answer, User author, Boolean result) {
+	public Vote(Answer answer, User author, boolean result) {
 
 		this.answer = answer;
 		this.author = author;

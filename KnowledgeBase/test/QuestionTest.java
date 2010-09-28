@@ -29,7 +29,7 @@ public class QuestionTest extends UnitTest{
 		
 		//Test the addAnswer method
 		Question firstQuestion = new Question(bob, "I have an question", "Why do we write the I in great letters?").save();
-		firstQuestion.addAnswer(bob, "I know now the answer, so the question is sloved").save();
+		firstQuestion.addAnswer(bob, "I know now the answer, the question is sloved").save();
 		
 		assertEquals(1, Answer.count());
 		
@@ -38,7 +38,7 @@ public class QuestionTest extends UnitTest{
 		assertEquals(1, bobAnswer.size());
 		
 		Answer answer = bobAnswer.get(0);
-		assertEquals("I know now the answer, so the question is sloved", answer.content);
+		assertEquals("I know now the answer, the question is sloved", answer.content);
 	}
 	
 	

@@ -40,7 +40,7 @@ public class Answer extends Model {
 		this.author.addAnswer(this);
 	}
 
-	public Answer addVote(User author, Boolean result) {
+	public Answer addVote(User author, boolean result) {
 		Vote vote = new Vote(this, author, result).save();
 		votes.add(vote);
 		this.save();

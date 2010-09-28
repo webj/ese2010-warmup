@@ -107,15 +107,14 @@ public class UserTest extends UnitTest {
 		// delete bob
 		bob.delete();
 
-		// All dependencies from bob should be deleted. Only the answers and votes to other users should be still there.
+		// All dependencies from bob should be deleted.
 		assertEquals(1, User.count());
-		assertEquals(1, Answer.count());
+		assertEquals(0, Answer.count());
 		assertEquals(1, Question.count());
 		
 		// Check if the right answers were deleted
 		List<Answer> braynanswer = Answer.find("byQuestion", braynQuestion).fetch();
-		Answer answer = braynanswer.get(0);
-		assertEquals("Brayn, you are an idiot", answer.content);
+		assertEquals(0, braynanswer.size());
 		
 		// Check if the remaining question is the right
 		List<Question> braynquestion = Question.find("byAuthor", brayn).fetch();

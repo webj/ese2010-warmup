@@ -79,6 +79,8 @@ public class VoteTest extends UnitTest {
 		List<Question> listbobQuestion = Question.find("byAuthor", bob).fetch();
 		Question bobQuestion = listbobQuestion.get(0);
 		
+		assertEquals("Whatever", bobQuestion.title);
+		
 		bobQuestion.addVote(bob, true).save();
 		bobQuestion.addVote(brayn, true).save();
 		
@@ -136,9 +138,9 @@ public class VoteTest extends UnitTest {
 		//check if the relations deletes right
 		bob.delete();
 		
-		assertEquals(1, Vote.count());
+		assertEquals(0, Vote.count());
 		votes = Vote.find("byResult", true).fetch();
-		assertEquals(1, votes.size());
+		assertEquals(0, votes.size());
 	
 	}
 

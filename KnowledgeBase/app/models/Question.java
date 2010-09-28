@@ -43,14 +43,14 @@ public class Question extends Model {
 
 	}
 
-	public Question addAnswer(User user, String content) {
-		Answer answer = new Answer(this, user, content).save();
-		answers.add(answer);
+	public Question addAnswer(User author, String content) {
+		Answer answer = new Answer(this, author, content).save();
+		this.answers.add(answer);
 		this.save();
 		return this;
 	}
 
-	public Question addVote(User author, Boolean result) {
+	public Question addVote(User author, boolean result) {
 		Vote vote = new Vote(this, author, result).save();
 		votes.add(vote);
 		this.save();
