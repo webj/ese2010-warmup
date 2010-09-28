@@ -7,13 +7,13 @@ import play.db.jpa.Model;
 
 @Entity
 public class Vote extends Model {
-	
+
 	public Boolean result;
 	public User author;
-	
+
 	@ManyToOne
 	public Answer answer;
-	
+
 	@ManyToOne
 	public Question question;
 
@@ -23,7 +23,7 @@ public class Vote extends Model {
 		this.author = author;
 		this.result = result;
 		this.author.addVote(this);
-		
+
 	}
 
 	public Vote(Answer answer, User author, boolean result) {

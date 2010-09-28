@@ -10,27 +10,24 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.hsqldb.lib.Iterator;
-
 import play.db.jpa.Model;
 
 @Entity
 public class Answer extends Model {
-
 
 	public Date timestamp;
 	public User author;
 
 	@Lob
 	public String content;
-	
+
 	@ManyToOne
 	public Question question;
 
-	@OneToMany(mappedBy = "answer", cascade = {CascadeType.MERGE, CascadeType.REMOVE, CascadeType.REFRESH})
+	@OneToMany(mappedBy = "answer", cascade = { CascadeType.MERGE,
+			CascadeType.REMOVE, CascadeType.REFRESH })
 	List<Vote> votes;
-	
-	
+
 	public Answer(Question question, User author, String content) {
 		this.question = question;
 		this.author = author;

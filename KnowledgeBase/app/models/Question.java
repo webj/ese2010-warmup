@@ -2,7 +2,6 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -25,12 +24,13 @@ public class Question extends Model {
 	@ManyToOne
 	public User author;
 
-	@OneToMany(mappedBy = "question", cascade = {CascadeType.MERGE, CascadeType.REMOVE, CascadeType.REFRESH})
+	@OneToMany(mappedBy = "question", cascade = { CascadeType.MERGE,
+			CascadeType.REMOVE, CascadeType.REFRESH })
 	public List<Answer> answers;
 
-	@OneToMany(mappedBy = "question", cascade = {CascadeType.MERGE, CascadeType.REMOVE, CascadeType.REFRESH})
+	@OneToMany(mappedBy = "question", cascade = { CascadeType.MERGE,
+			CascadeType.REMOVE, CascadeType.REFRESH })
 	public List<Vote> votes;
-
 
 	public Question(User user, String title, String content) {
 

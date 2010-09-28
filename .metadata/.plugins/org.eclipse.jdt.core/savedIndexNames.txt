@@ -27,7 +27,6 @@ INDEX VERSION 1.126+/home/juerg/ese-workspace/ese2010-warmup/.metadata/.plugins/
 1796948596.index
 3699419254.index
 1265583828.index
-1586570733.index
 3550450572.index
 450456872.index
 1433967888.index

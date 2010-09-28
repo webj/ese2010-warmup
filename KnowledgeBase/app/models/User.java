@@ -7,8 +7,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
-import org.hsqldb.lib.Iterator;
-
 import play.db.jpa.Model;
 
 @Entity
@@ -16,21 +14,21 @@ public class User extends Model {
 
 	public String name;
 	public String password;
-	
-	
-	
-	@OneToMany(mappedBy = "author", cascade = {CascadeType.MERGE, CascadeType.REMOVE, CascadeType.REFRESH})
+
+	@OneToMany(mappedBy = "author", cascade = { CascadeType.MERGE,
+			CascadeType.REMOVE, CascadeType.REFRESH })
 	public List<Question> questions;
-	
-	@OneToMany(mappedBy = "author", cascade = {CascadeType.MERGE, CascadeType.REMOVE, CascadeType.REFRESH})
+
+	@OneToMany(mappedBy = "author", cascade = { CascadeType.MERGE,
+			CascadeType.REMOVE, CascadeType.REFRESH })
 	public List<Answer> answers;
-	
-	@OneToMany(mappedBy = "author", cascade = {CascadeType.MERGE, CascadeType.REMOVE, CascadeType.REFRESH})
+
+	@OneToMany(mappedBy = "author", cascade = { CascadeType.MERGE,
+			CascadeType.REMOVE, CascadeType.REFRESH })
 	public List<Vote> votes;
-	
 
 	public User(String name, String password) {
-		
+
 		this.votes = new ArrayList<Vote>();
 		this.questions = new ArrayList<Question>();
 		this.answers = new ArrayList<Answer>();
@@ -44,13 +42,13 @@ public class User extends Model {
 		this.save();
 		return this;
 	}
-	
-	public User addAnswer(Answer answer){
-		
+
+	public User addAnswer(Answer answer) {
+
 		this.answers.add(answer);
 		this.save();
 		return this;
-		
+
 	}
 
 	public User addVote(Vote vote) {
