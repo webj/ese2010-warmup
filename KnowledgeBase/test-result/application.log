@@ -1,6 +1,522 @@
-28 Sep 2010 17:42:42,207 INFO  ~ Starting /home/juerg/ese20100-warmup/ese2010-warmup/KnowledgeBase
-28 Sep 2010 17:42:43,015 INFO  ~ 
-28 Sep 2010 17:42:43,015 INFO  ~ Go to http://localhost:9000/@tests to run the tests
-28 Sep 2010 17:42:43,015 INFO  ~ 
-28 Sep 2010 17:42:43,015 WARN  ~ You're running Play! in DEV mode
-28 Sep 2010 17:42:43,154 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+28 Sep 2010 21:02:59,483 INFO  ~ Starting /home/juerg/ese-workspace/ese2010-warmup/KnowledgeBase
+28 Sep 2010 21:03:00,004 INFO  ~ 
+28 Sep 2010 21:03:00,004 INFO  ~ Go to http://localhost:9000/@tests to run the tests
+28 Sep 2010 21:03:00,004 INFO  ~ 
+28 Sep 2010 21:03:00,004 WARN  ~ You're running Play! in DEV mode
+28 Sep 2010 21:03:00,072 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+28 Sep 2010 21:03:03,221 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
+28 Sep 2010 21:03:03,742 INFO  ~ Application 'KnowledgeBase' is now started !
+28 Sep 2010 21:03:07,982 WARN  ~ SQL Error: -177, SQLState: 23000
+28 Sep 2010 21:03:07,982 ERROR ~ Integrity constraint violation - no parent FK752F2BDEADF11F59 table: QUESTION in statement [insert into Answer (id, author_id, content, question, timestamp) values (null, ?, ?, ?, ?)]
+28 Sep 2010 21:06:20,522 ERROR ~ Unsuccessful: alter table Vote add constraint FK28C70A107F7AF0 foreign key (question) references Question
+28 Sep 2010 21:06:20,522 ERROR ~ Column types do not match in statement [alter table Vote add constraint FK28C70A107F7AF0 foreign key (question) references Question]
+28 Sep 2010 21:06:20,522 ERROR ~ Unsuccessful: alter table Vote add constraint FK28C70A477DFBA0 foreign key (answer) references Answer
+28 Sep 2010 21:06:20,522 ERROR ~ Column types do not match in statement [alter table Vote add constraint FK28C70A477DFBA0 foreign key (answer) references Answer]
+28 Sep 2010 21:06:22,754 WARN  ~ SQL Error: 0, SQLState: null
+28 Sep 2010 21:06:22,754 ERROR ~ failed batch
+28 Sep 2010 21:06:22,755 ERROR ~ Could not synchronize database state with session
+org.hibernate.exception.GenericJDBCException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.handledNonSpecificException(SQLStateConverter.java:126)
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:114)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:312)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1028)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:304)
+	at play.db.jpa.JPASupport.delete(JPASupport.java:326)
+	at VoteTest.shouldAddAnVoteToAnswer(VoteTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:59)
+	at org.junit.internal.runners.MethodRoadie.runTestMethod(MethodRoadie.java:98)
+	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:79)
+	at org.junit.internal.runners.MethodRoadie.runBeforesThenTestThenAfters(MethodRoadie.java:87)
+	at org.junit.internal.runners.MethodRoadie.runTest(MethodRoadie.java:77)
+	at org.junit.internal.runners.MethodRoadie.run(MethodRoadie.java:42)
+	at org.junit.internal.runners.JUnit4ClassRunner.invokeTestMethod(JUnit4ClassRunner.java:88)
+	at org.junit.internal.runners.JUnit4ClassRunner.runMethods(JUnit4ClassRunner.java:51)
+	at org.junit.internal.runners.JUnit4ClassRunner$1.run(JUnit4ClassRunner.java:44)
+	at org.junit.internal.runners.ClassRoadie.runUnprotected(ClassRoadie.java:27)
+	at org.junit.internal.runners.ClassRoadie.runProtected(ClassRoadie.java:37)
+	at org.junit.internal.runners.JUnit4ClassRunner.run(JUnit4ClassRunner.java:42)
+	at org.junit.internal.runners.CompositeRunner.runChildren(CompositeRunner.java:33)
+	at org.junit.internal.runners.CompositeRunner.run(CompositeRunner.java:28)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:130)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:109)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:100)
+	at play.test.TestEngine.run(TestEngine.java:111)
+	at controllers.TestRunner.run(TestRunner.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at play.server.HttpHandler$MinaInvocation.execute(HttpHandler.java:500)
+	at play.Invoker$Invocation.run(Invoker.java:176)
+	at play.server.HttpHandler$MinaInvocation.run(HttpHandler.java:488)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(ScheduledThreadPoolExecutor.java:165)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.sql.BatchUpdateException: failed batch
+	at org.hsqldb.jdbc.jdbcStatement.executeBatch(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.executeBatch(Unknown Source)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeBatch(NewProxyPreparedStatement.java:1723)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 48 more
+28 Sep 2010 21:06:22,789 WARN  ~ SQL Error: 0, SQLState: null
+28 Sep 2010 21:06:22,789 ERROR ~ failed batch
+28 Sep 2010 21:06:22,789 ERROR ~ Could not synchronize database state with session
+org.hibernate.exception.GenericJDBCException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.handledNonSpecificException(SQLStateConverter.java:126)
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:114)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:312)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1028)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:304)
+	at play.db.jpa.JPASupport.delete(JPASupport.java:326)
+	at VoteTest.shouldAddAnVoteQuestion(VoteTest.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:59)
+	at org.junit.internal.runners.MethodRoadie.runTestMethod(MethodRoadie.java:98)
+	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:79)
+	at org.junit.internal.runners.MethodRoadie.runBeforesThenTestThenAfters(MethodRoadie.java:87)
+	at org.junit.internal.runners.MethodRoadie.runTest(MethodRoadie.java:77)
+	at org.junit.internal.runners.MethodRoadie.run(MethodRoadie.java:42)
+	at org.junit.internal.runners.JUnit4ClassRunner.invokeTestMethod(JUnit4ClassRunner.java:88)
+	at org.junit.internal.runners.JUnit4ClassRunner.runMethods(JUnit4ClassRunner.java:51)
+	at org.junit.internal.runners.JUnit4ClassRunner$1.run(JUnit4ClassRunner.java:44)
+	at org.junit.internal.runners.ClassRoadie.runUnprotected(ClassRoadie.java:27)
+	at org.junit.internal.runners.ClassRoadie.runProtected(ClassRoadie.java:37)
+	at org.junit.internal.runners.JUnit4ClassRunner.run(JUnit4ClassRunner.java:42)
+	at org.junit.internal.runners.CompositeRunner.runChildren(CompositeRunner.java:33)
+	at org.junit.internal.runners.CompositeRunner.run(CompositeRunner.java:28)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:130)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:109)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:100)
+	at play.test.TestEngine.run(TestEngine.java:111)
+	at controllers.TestRunner.run(TestRunner.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at play.utils.Java.invokeStatic(Java.java:129)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:139)
+	at play.server.HttpHandler$MinaInvocation.execute(HttpHandler.java:500)
+	at play.Invoker$Invocation.run(Invoker.java:176)
+	at play.server.HttpHandler$MinaInvocation.run(HttpHandler.java:488)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$101(ScheduledThreadPoolExecutor.java:165)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.sql.BatchUpdateException: failed batch
+	at org.hsqldb.jdbc.jdbcStatement.executeBatch(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.executeBatch(Unknown Source)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.executeBatch(NewProxyPreparedStatement.java:1723)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 48 more
+28 Sep 2010 21:21:45,911 ERROR ~ 
+
+@641pdagaf
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:21:57,792 ERROR ~ 
+
+@641pdagag
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:21:58,630 ERROR ~ 
+
+@641pdagah
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:21:58,960 ERROR ~ 
+
+@641pdagai
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:21:59,104 ERROR ~ 
+
+@641pdagaj
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:21:59,270 ERROR ~ 
+
+@641pdagak
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:22:32,348 ERROR ~ 
+
+@641pdagal
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:22:33,160 ERROR ~ 
+
+@641pdagam
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:22:33,813 ERROR ~ 
+
+@641pdagan
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answers)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:24:24,498 ERROR ~ 
+
+@641pdagao
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:24:25,150 ERROR ~ 
+
+@641pdagap
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:24:25,590 ERROR ~ 
+
+@641pdagb0
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:24:25,749 ERROR ~ 
+
+@641pdagb1
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:24:25,899 ERROR ~ 
+
+@641pdagb2
+Internal Server Error (500) for request GET /@tests
+
+JPA error
+A JPA error occured (Unable to build EntityManagerFactory): Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:183)
+	at play.Play.start(Play.java:381)
+	at play.Play.detectChanges(Play.java:492)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.MappingException: Could not determine type for: java.util.List, at table: User, for columns: [org.hibernate.mapping.Column(answerss)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:292)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:276)
+	at org.hibernate.mapping.Property.isValid(Property.java:207)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:458)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:215)
+	at org.hibernate.cfg.Configuration.validate(Configuration.java:1149)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1334)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:669)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:181)
+	... 4 more
+28 Sep 2010 21:29:36,043 ERROR ~ 
+
+@641pdagb3
+Internal Server Error (500) for request GET /@tests
+
+Compilation error (In /test/VoteTest.java around line 145)
+The file /test/VoteTest.java could not be compiled. Error raised is : Syntax error, insert "}" to complete ClassBody
+
+play.exceptions.JavaCompilationException: Syntax error, insert "}" to complete ClassBody
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:240)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:551)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:409)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:271)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:253)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:250)
+	at play.Play.detectChanges(Play.java:476)
+	at play.Invoker$Invocation.init(Invoker.java:98)
+	at Invocation.HTTP Request(Play!)

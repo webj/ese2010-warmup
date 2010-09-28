@@ -83,7 +83,7 @@ public class UserTest extends UnitTest {
 
 		// create questions
 		bob.addQuestion("What's going on?", "Hey guys, What's going on?").save();
-		brayn.addQuestion("Why doesen't snwo smell?",
+		brayn.addQuestion("Why doesen't snow smell?",
 						"Hey, yesterday I was in the mountains. "
 								+ "I was very confused when I detected that snow doesen't smell. Pleas help me!").save();
 
@@ -98,7 +98,8 @@ public class UserTest extends UnitTest {
 		bobQuestion.addAnswer(brayn, "A lot").save();
 		braynQuestion.addAnswer(bob, "Brayn, you are an idiot").save();
 		bobQuestion.addAnswer(bob, "Oh, ok").save();
-
+		
+		//check if the number of questions/users/answers are the right
 		assertEquals(2, Question.count());
 		assertEquals(2, User.count());
 		assertEquals(3, Answer.count());
@@ -106,16 +107,21 @@ public class UserTest extends UnitTest {
 		// delete bob
 		bob.delete();
 
-		// All dependencies from bob should be deleted
+		// All dependencies from bob should be deleted. Only the answers and votes to other users should be still there.
 		assertEquals(1, User.count());
 		assertEquals(1, Answer.count());
 		assertEquals(1, Question.count());
 		
-		//Check if the remaining question is the right
+		// Check if the right answers were deleted
+		List<Answer> braynanswer = Answer.find("byQuestion", braynQuestion).fetch();
+		Answer answer = braynanswer.get(0);
+		assertEquals("Brayn, you are an idiot", answer.content);
+		
+		// Check if the remaining question is the right
 		List<Question> braynquestion = Question.find("byAuthor", brayn).fetch();
 		Question question = braynquestion.get(0);
 		
-		assertEquals("Why doesen't snwo smell?", question.content);
+		assertEquals("Why doesen't snow smell?", question.title);
 		
 	}
 	

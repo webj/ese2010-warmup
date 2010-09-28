@@ -9,32 +9,28 @@ import play.db.jpa.Model;
 public class Vote extends Model {
 	
 	public Boolean result;
-
-	@ManyToOne
 	public User author;
 	
 	@ManyToOne
 	public Answer answer;
-
+	
 	@ManyToOne
 	public Question question;
 
-	public Vote(Question quesiton, User author, Boolean result2) {
+	public Vote(Question quesiton, User author, Boolean result) {
 
 		this.question = quesiton;
 		this.author = author;
-		this.result = result2;
-		author.addVote(this);
-
+		this.result = result;
+		this.author.addVote(this);
+		
 	}
-	
 
 	public Vote(Answer answer, User author, Boolean result) {
 
 		this.answer = answer;
 		this.author = author;
 		this.result = result;
-		author.addVote(this);
-
+		this.author.addVote(this);
 	}
 }
